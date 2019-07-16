@@ -45,9 +45,18 @@ namespace ModelsAndModelBinding.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost] //Take a student as a parameter so that it can do model binding
         public IActionResult RegisterMB(Student s)
         {
+            //Verifies all data annotations in the class are valid
+            if (ModelState.IsValid)
+            {
+                //Add to database
+                SudentDB.Register(s);
+
+                //Display thank you/success message
+                ViewData["Success"] = "Student was successfully registered!";
+            }
             return View();
         }
     }
