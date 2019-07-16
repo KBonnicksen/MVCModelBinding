@@ -11,6 +11,7 @@ namespace ModelsAndModelBinding.Controllers
 {
     public class StudentController : Controller
     {
+        //Default (get request) (when you go to a url and the server sends you something back)
         [HttpGet]
         public IActionResult Register()
         {
