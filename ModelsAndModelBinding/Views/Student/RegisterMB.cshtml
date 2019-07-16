@@ -1,0 +1,15 @@
+﻿@model  Student
+@{
+    ViewData["Title"] = "RegisterMB";
+}
+
+<h1>RegisterMB</h1>
+
+<form method="post">
+    <label asp-for="FullName"></label>
+    <input asp-for="FullName" />
+    <span asp-validation-for="FullName"></span>
+    <br />
+
+    <input type="submit" value="Register Model Binding Way" />
+</form>

@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Welcome!</h1>
+
+<ol>
+    @for (int i = 1; i <= 10; i++)
+    {
+        <li>Item #@i  </li>
+    }
+</ol>
+
+<p>
+    Today's date is @DateTime.Today.ToShortDateString()
+</p>
